@@ -30,7 +30,7 @@ a {
   top: 120px;
   width: 240px;
   height: auto;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.8);
 }
 #content .content-ul li {
   height: 34px;
@@ -41,4 +41,7 @@ a {
   display: block;
   margin-left: 15px;
   margin-right: 11px;
+}
+#content .content-ul .li-color {
+  background: #FF920B;
 }

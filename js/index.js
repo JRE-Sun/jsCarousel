@@ -25,11 +25,11 @@ window.onload = function() {
         content_ul_li[i].addEventListener("mouseover", function() {
             for (var j = 0; j < content_ul_li.length; j++) {
                 content_img[j].style.display = "none";
-                content_ul_li[j].style.backgroundColor = "rgb(255, 255, 255)";
+                removeClass(content_ul_li[j], "li-color");
 
             }
             content_img[this.index].style.display = "block";
-            this.style.background = "#FF920B";
+            addClass(this, "li-color");
         }, false);
     }
 
@@ -39,4 +39,27 @@ window.onload = function() {
     function getDefaultStyle(obj, attribute) {
         return obj.currentStyle ? obj.currentStyle[attribute] : document.defaultView.getComputedStyle(obj, false)[attribute];
     }
+
+
+    function hasClass(elem, cls) {
+        cls = cls || '';
+        if (cls.replace(/\s/g, '').length == 0) return false; //当cls没有参数时，返回false   
+        return new RegExp(' ' + cls + ' ').test(' ' + elem.className + ' ');
+    }
+    // 原生js给元素添加类
+    function addClass(elem, cls) {
+        if (!hasClass(elem, cls)) {
+            elem.className = elem.className == '' ? cls : elem.className + ' ' + cls;
+        }
+    }
+
+    // 原生js删除元素上的类
+    function removeClass(elem, cls) {
+        if (hasClass(elem, cls)) {
+            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, '') + ' ';
+            while (newClass.indexOf(' ' + cls + ' ') >= 0) { newClass = newClass.replace(' ' + cls + ' ', ' '); }
+            elem.className = newClass.replace(/^\s+|\s+$/g, '');
+        }
+    }
+
 };
