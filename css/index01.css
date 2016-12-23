@@ -1,102 +1,149 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
+
 body {
-  font: 16px hiragino sans gb,microsoft yahei,simsun;
+    font: 16px hiragino sans gb, microsoft yahei, simsun;
 }
+
+
+/*轮播开始*/
+
 #content {
-  width: 550px;
-  height: 285px;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-top: 150px;
-  position: relative;
-  cursor: pointer;
+    width: 550px;
+    height: 285px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 150px;
+    position: relative;
+    /*鼠标变成手*/
+    cursor: pointer;
 }
+
+
+/*文字显示遮罩层开始*/
+
 #content .mask {
-  height: 50px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  left: 0;
-  bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
+
 #content .mask span {
-  float: left;
-  position: relative;
-  top: 5px;
-  left: 11px;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: url(../img/mask.png) no-repeat;
+    float: left;
+    position: relative;
+    top: 5px;
+    left: 11px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/mask.png) no-repeat;
 }
+
 #content .mask .mask-p {
-  margin-left: 22px;
-  float: left;
-  display: none;
+    margin-left: 22px;
+    float: left;
+    display: none;
 }
+
 #content .mask .mask-p p {
-  color: white;
+    color: white;
 }
+
 #content .mask .mask-p .p1 {
-  height: 30px;
-  line-height: 30px;
+    height: 30px;
+    line-height: 30px;
 }
+
 #content .mask .mask-p .p2 {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 #content .mask .p-active {
-  display: block;
+    display: block;
 }
+
 #content .mask ul {
-  position: absolute;
-  right: 10px;
-  top: 20px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
 }
+
+
+/*右下方的小圆点开始*/
+
 #content .mask ul li {
-  float: left;
-  list-style: none;
-  width: 10px;
-  height: 10px;
-  margin: 0 6px;
-  background: url(../img/li0.png) no-repeat;
+    float: left;
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    background: url(../img/li0.png) no-repeat;
 }
+
 #content .mask ul .li-active {
-  background: url(../img/li1.png) no-repeat;
+    background: url(../img/li1.png) no-repeat;
 }
+
+
+/*右下方的小圆点结束*/
+
+
+/*文字显示遮罩层结束*/
+
+
+/*左右按钮开始*/
+
 #content .next {
-  position: absolute;
-  display: block;
-  top: 0px;
-  right: 0px;
-  width: 0px;
-  height: 64px;
-  background: url(../img/next.png) no-repeat;
-  transition: 0.4s;
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 0px;
+    width: 0px;
+    height: 64px;
+    background: url(../img/next.png) no-repeat;
+    transition: 0.4s;
 }
+
 #content .pre {
-  position: absolute;
-  display: block;
-  top: 0px;
-  left: 0px;
-  width: 0px;
-  height: 64px;
-  background: url(../img/pre.png) no-repeat;
-  transition: 0.4s;
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 64px;
+    background: url(../img/pre.png) no-repeat;
+    transition: 0.4s;
 }
+
+
+/*左右按钮结束*/
+
+
+/*显示的三张图片开始*/
+
 #content img {
-  top: 0;
-  left: 0;
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  transition: 0.8s;
-  opacity: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+    opacity: 0;
 }
+
 #content .img-active {
-  opacity: 1;
+    opacity: 1;
 }
+
+
+/*显示的三张图片结束*/
+
+
+/*轮播结束*/

@@ -6,12 +6,16 @@ window.onload = function() {
     var arrLi = document.querySelectorAll(".mask ul li");
     var arrP = document.querySelectorAll(".mask-p");
     // alert(arrLi.length);
+
+    // 设置左右按钮自动垂直居中开始
     (function() {
         var content_height = getDefaultStyle(content, "height").substring(0, getDefaultStyle(content, "height").indexOf("p"));
         var next_height = getDefaultStyle(next, "height").substring(0, getDefaultStyle(next, "height").indexOf("p"));
         next.style.top = (content_height - next_height) / 2 + "px";
         pre.style.top = next.style.top;
     })();
+    // 设置左右按钮自动垂直居中结束
+
 
     content.addEventListener("mouseover", function() {
         next.style.width = "37px";
@@ -40,6 +44,7 @@ window.onload = function() {
         }, false);
     }
 
+    // 左右按钮点击特效开始
     next.addEventListener("click", function() {
         if ((n++) < arrImg.length - 1) {
             // alert(n);
@@ -96,7 +101,7 @@ window.onload = function() {
             p = n;
         }
     }, false);
-
+    // 左右按钮点击特效结束
 
 
 
