@@ -67,14 +67,24 @@ body {
   height: 54px;
   margin: 0 auto;
   line-height: 54px;
+  position: relative;
 }
-#content .scroll-div .scroll-nav ul {
-  width: 900px;
-  float: left;
+#content .scroll-div .scroll-nav .scroll-nav-div {
+  width: 880px;
   overflow: hidden;
-  padding-left: 15px;
+  position: absolute;
+  left: 46px;
+  height: 54px;
 }
-#content .scroll-div .scroll-nav ul li {
+#content .scroll-div .scroll-nav .scroll-nav-div .scroll-nav-ul {
+  width: 1800px;
+  height: 54px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 1s;
+}
+#content .scroll-div .scroll-nav .scroll-nav-div .scroll-nav-ul li {
   width: 90px;
   height: 54px;
   list-style: none;
@@ -82,15 +92,15 @@ body {
   margin: 0 10px;
   margin-top: 5px;
 }
-#content .scroll-div .scroll-nav ul li .scroll-nav-img {
+#content .scroll-div .scroll-nav .scroll-nav-div .scroll-nav-ul li .scroll-nav-img {
   height: 50px;
   border: 2px solid rgba(255, 255, 255, 0);
   cursor: pointer;
 }
-#content .scroll-div .scroll-nav ul li .scroll-nav-img:hover {
+#content .scroll-div .scroll-nav .scroll-nav-div .scroll-nav-ul li .scroll-nav-img:hover {
   border: 2px solid white;
 }
-#content .scroll-div .scroll-nav ul li .scroll-nav-img-active {
+#content .scroll-div .scroll-nav .scroll-nav-div .scroll-nav-ul li .scroll-nav-img-active {
   border: 2px solid white;
 }
 #content .scroll-div .scroll-nav a {

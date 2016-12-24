@@ -82,34 +82,47 @@ body{
             height: 54px;
             margin: 0 auto;
             line-height: 54px;
+            position: relative;
             // background: red;
-            ul{
-                width: 900px;
-                float: left;
-                // margin: 0 auto;
+            .scroll-nav-div{
+                width: 880px;
                 overflow: hidden;
-                padding-left: 15px;
-                li{
-                    width: 90px;
+                position: absolute;
+                left: 46px;
+                height: 54px;
+                .scroll-nav-ul{
+                    width: 1800px;
                     height: 54px;
-                    list-style: none;
-                    float: left;
-                    margin: 0 10px;
-                    margin-top: 5px;
-                    .scroll-nav-img{
-                        height: 50px;
-                        // margin-top: 5px;
-                        border: 2px solid rgba(255, 255, 255, 0);
-                        cursor: pointer;
-                        &:hover{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    transition: 1s;
+                    // float: left;
+                    // margin: 0 auto;
+                    // padding-left: 15px;
+                    li{
+                        width: 90px;
+                        height: 54px;
+                        list-style: none;
+                        float: left;
+                        margin: 0 10px;
+                        margin-top: 5px;
+                        .scroll-nav-img{
+                            height: 50px;
+                            // margin-top: 5px;
+                            border: 2px solid rgba(255, 255, 255, 0);
+                            cursor: pointer;
+                            &:hover{
+                                border: 2px solid white;
+                            }
+                        }
+                        .scroll-nav-img-active{
                             border: 2px solid white;
                         }
                     }
-                    .scroll-nav-img-active{
-                        border: 2px solid white;
-                    }
                 }
             }
+          
             a{
                 // position: absolute;
                 width: 31px;
